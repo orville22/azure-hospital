@@ -1,0 +1,147 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 10rem;
+  position: relative;
+
+  .logo {
+    padding: 2rem;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    margin-left: 3rem;
+  }
+
+  &-link {
+    font-weight: 700;
+    color: $color-grey;
+    position: relative;
+    padding-bottom: 4px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: $color-blue;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.nav-hamburger {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 10%;
+  z-index: 1000;
+  padding: 0.3rem;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 5px;
+    width: 35px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: $color-blue-dk;
+    transition: all 0.3s ease-in;
+  }
+  #span1.open {
+    transform: rotate(-405deg) translateY(1.4rem);
+    transform-origin: center;
+  }
+
+  #span2.open {
+    transform: translateX(5rem);
+    opacity: 0;
+  }
+  #span3.open {
+    transform: rotate(405deg) translateY(-1.4rem);
+    transform-origin: center;
+  }
+}
+
+//MEDIA QUERIES
+
+@media (max-width: 1023px) {
+  .nav {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 950px) {
+  //hamburger is activated
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffffc6;
+
+    height: 60vh;
+    width: 100%;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    padding: 5rem;
+    text-transform: uppercase;
+
+    animation: fadeOutRight;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    &.open {
+      display: block;
+      animation: fadeInRight;
+      animation-duration: 0.5s;
+    }
+  }
+  .nav-item {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+
+    .nav-link {
+      padding: 1rem;
+      &::before {
+        height: 5rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  .nav-hamburger {
+    display: block;
+  }
+}
+
+@keyframes fadeOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(500px);
+    opacity: 0;
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}

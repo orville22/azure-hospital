@@ -1,0 +1,84 @@
+.footer {
+  height: 30vh;
+  background-color: $color-blue-dk;
+  color: #fff;
+  padding: 3rem;
+
+  &-head {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-nav {
+    display: flex;
+    margin-right: 5rem;
+
+    a:link,
+    a:visited {
+      color: #fff;
+      margin: 0 1.5rem;
+    }
+
+    a:hover {
+      color: $color-green-lt;
+    }
+  }
+
+  &-social-media {
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+
+    a:link,
+    a:visited {
+      color: #fff;
+    }
+    a:hover,
+    a:active {
+      color: $color-green-lt;
+    }
+
+    ion-icon {
+      margin-right: 2rem;
+      font-size: 3rem;
+    }
+  }
+
+  &-essentials {
+    display: flex;
+
+    p {
+      margin-right: 3rem;
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
+
+//MEDIA QUERIES
+@media (max-width: 950px) {
+  .footer {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    &-social-media {
+      margin-right: 0;
+    }
+
+    &-nav {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    &-essentials {
+      font-size: 80%;
+    }
+  }
+}
