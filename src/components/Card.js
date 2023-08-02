@@ -6,7 +6,7 @@ export default function Card({ children, bgColor = '#29a3f5' }) {
   return (
     <div className="card" style={cardStyle}>
       {children}
-      <a href="#">Show Details</a>
+      <a href="link">Show Details</a>
     </div>
   );
 }
