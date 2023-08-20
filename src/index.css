@@ -212,7 +212,11 @@ button {
     font-size: 85%; } }
 
 @media (max-width: 750px) {
+  .section.responsive {
+    height: fit-content;
+    font-size: 90%; }
   .slides {
+    height: 100%;
     flex-direction: column;
     padding: 2rem; }
     .slides .text-container {
@@ -290,7 +294,9 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 3rem;
-  height: 25vh; }
+  height: 25vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
   .stats-container .stat {
     display: flex;
     flex-direction: column;
@@ -346,6 +352,23 @@ h2 {
   .mission-vision {
     grid-template-columns: 1fr; } }
 
+@media (max-width: 700px) {
+  .features h2 {
+    width: 90%;
+    margin-bottom: 1rem; } }
+
+@media (max-width: 400px) {
+  .stats-container {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem; }
+    .stats-container .stat {
+      width: 100%;
+      height: fit-content;
+      font-size: 90%; } }
+
 .footer {
   height: 30vh;
   background-color: #29a3f5;
@@ -396,3 +419,9 @@ h2 {
     margin-bottom: 2rem; }
   .footer-essentials {
     font-size: 80%; } }
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 80%; }
+    .footer ion-icon {
+      width: 2.5rem; } }

@@ -16,6 +16,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 3rem;
   height: 25vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   .stat {
     display: flex;
@@ -96,5 +98,30 @@
   }
   .mission-vision {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .features {
+    h2 {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-container {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    .stat {
+      width: 100%;
+      height: fit-content;
+      font-size: 90%;
+    }
   }
 }

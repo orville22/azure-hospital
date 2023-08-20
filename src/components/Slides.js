@@ -41,12 +41,13 @@ export default function Slides() {
   }, []);
 
   return (
-    <div className="section">
+    <div className="section responsive">
       <div className="slides">
         <TextSlide>
           <TextContent content={content[activeTab]} />
           <a
             className="link-details"
+            ß
             href={content[activeTab].link}
             target="_blank"
             rel="noreferrer"

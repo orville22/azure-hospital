@@ -86,19 +86,22 @@
 }
 
 @media (max-width: 750px) {
+  .section.responsive {
+    height: fit-content;
+    font-size: 90%;
+  }
   .slides {
+    height: 100%;
     flex-direction: column;
     padding: 2rem;
 
     .text-container {
       padding-left: 0;
     }
-
     .tabs {
       position: relative;
       bottom: 2rem;
     }
-
     img {
       width: 100%;
       clip-path: none;
